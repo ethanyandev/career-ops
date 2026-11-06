@@ -1,5 +1,41 @@
 # Changelog
 
+## [1.40.0](https://github.com/career-ops-hq/career-ops/compare/career-ops-v1.39.0...career-ops-v1.40.0) (2026-11-06)
+
+
+### Features
+
+* **cli:** Add Oh My Pi (omp) host support ([#5804](https://github.com/career-ops-hq/career-ops/issues/5804)) ([b273441](https://github.com/career-ops-hq/career-ops/commit/b273441036e8209a1ad125d4f800f09e22b55d3c))
+* **providers:** add Trakstar Hire openings provider ([#6131](https://github.com/career-ops-hq/career-ops/issues/6131)) ([4fbb15e](https://github.com/career-ops-hq/career-ops/commit/4fbb15e9b1bf37504fc55c634a99e47342a585d6))
+* **tracker:** add verify-tracker-url-match.mjs ([#6061](https://github.com/career-ops-hq/career-ops/issues/6061)) ([e3db0c9](https://github.com/career-ops-hq/career-ops/commit/e3db0c953a05a5efdf9bd26d5281560ec805d64d))
+
+
+### Bug Fixes
+
+* **audit-portals:** exit 1 instead of aborting on Windows after the audit ([#6543](https://github.com/career-ops-hq/career-ops/issues/6543)) ([7de768e](https://github.com/career-ops-hq/career-ops/commit/7de768eefa605d9019d67572d08656e3bfcbf492))
+* **batch-evaluate-gemini:** read --limit N and --help instead of running every offer ([#6333](https://github.com/career-ops-hq/career-ops/issues/6333)) ([b5de065](https://github.com/career-ops-hq/career-ops/commit/b5de065eefd1df64a1165b7a1998367de012b017))
+* **batch:** read batch-state.tsv from the checkout in merge-tracker and reserve-report-num ([#6449](https://github.com/career-ops-hq/career-ops/issues/6449)) ([beded4a](https://github.com/career-ops-hq/career-ops/commit/beded4a7828f37afdf127bb63265edb5fcb8fefd))
+* **batch:** take the state lock with flock where mkdir is not atomic ([#6545](https://github.com/career-ops-hq/career-ops/issues/6545)) ([6de681c](https://github.com/career-ops-hq/career-ops/commit/6de681cc866613a2a53ce5f6790d76c49d294979)), closes [#6362](https://github.com/career-ops-hq/career-ops/issues/6362)
+* **check-jd-archive:** reject batch-prompt's unfilled JD placeholder ([#6490](https://github.com/career-ops-hq/career-ops/issues/6490)) ([57e339b](https://github.com/career-ops-hq/career-ops/commit/57e339bb19dab2f8c3f31d5e2bcd0666e7f37260))
+* **docs:** list every routed command in the published menus ([#6048](https://github.com/career-ops-hq/career-ops/issues/6048)) ([63154d4](https://github.com/career-ops-hq/career-ops/commit/63154d405caa604ba85d4812fcc0ac15b54308c8))
+* **fetch-jd:** exit 1 on a miss instead of aborting on Windows ([#6462](https://github.com/career-ops-hq/career-ops/issues/6462)) ([744666a](https://github.com/career-ops-hq/career-ops/commit/744666a2f010cb10f430d70865180bc7781ddabf))
+* **http:** do not retry a request that already spent its timeout ([#6132](https://github.com/career-ops-hq/career-ops/issues/6132)) ([92c1d88](https://github.com/career-ops-hq/career-ops/commit/92c1d88d39ac2d9785bf1b6ebe7f81bc9332cd61))
+* **jd-years:** stop a list item reading as a required heading ([#6463](https://github.com/career-ops-hq/career-ops/issues/6463)) ([05ceb99](https://github.com/career-ops-hq/career-ops/commit/05ceb992d25c7870fc89823c88e75fcb7464b135))
+* **plugins:** exit non-zero when a plugin run fails ([#6125](https://github.com/career-ops-hq/career-ops/issues/6125)) ([a77608b](https://github.com/career-ops-hq/career-ops/commit/a77608b77387b8fe97ab177a8d7d35d0654eb2cd))
+* **portals:** repoint Runway to its Ashby board and enable it ([#6505](https://github.com/career-ops-hq/career-ops/issues/6505)) ([ea0bb9c](https://github.com/career-ops-hq/career-ops/commit/ea0bb9cfecd3bf7b78df2e7bbb476898fc64c2d9))
+* **portals:** report why a board was not verified ([#6085](https://github.com/career-ops-hq/career-ops/issues/6085)) ([cc6f0a1](https://github.com/career-ops-hq/career-ops/commit/cc6f0a1d8a3051f92bda8566fad4c22d6c3bb7cd))
+* **providers:** pass Arbeitnow description through so filters can see it ([#6439](https://github.com/career-ops-hq/career-ops/issues/6439)) ([798d956](https://github.com/career-ops-hq/career-ops/commit/798d95684ee5a8f6f6df4199d11bc7d36086a6ec))
+* **providers:** read jobspresso's query-free feed path, robots.txt disallows /*? ([#6546](https://github.com/career-ops-hq/career-ops/issues/6546)) ([de6048f](https://github.com/career-ops-hq/career-ops/commit/de6048f86f3c5409f8a1d8bdf8c4526b3da75ab4)), closes [#5774](https://github.com/career-ops-hq/career-ops/issues/5774)
+* **scan:** gate conditional workplace geography before Inbox admission ([#6484](https://github.com/career-ops-hq/career-ops/issues/6484)) ([14bfd95](https://github.com/career-ops-hq/career-ops/commit/14bfd9534b3ea98afabeff84b943d80616a4d62b))
+* **scan:** name companies no provider claims ([#6088](https://github.com/career-ops-hq/career-ops/issues/6088)) ([cff21dd](https://github.com/career-ops-hq/career-ops/commit/cff21dd0ab53351168f4062fd7c72d2ff9725e52))
+* **telegram-channel:** read Habr Career links and positional employers ([#6363](https://github.com/career-ops-hq/career-ops/issues/6363)) ([9486e6a](https://github.com/career-ops-hq/career-ops/commit/9486e6a6d66db15b25cf00e3f25a2ddf49930a67))
+* **tracker:** stop a placeholder or a URL spelling hiding which posting a row is ([#6390](https://github.com/career-ops-hq/career-ops/issues/6390)) ([abe49bb](https://github.com/career-ops-hq/career-ops/commit/abe49bbbbbc210d4135a9b86cd329060fc1395e1))
+
+
+### Performance Improvements
+
+* **scan:** fetch up to 32 companies, 10 per host ([#6133](https://github.com/career-ops-hq/career-ops/issues/6133)) ([975abe0](https://github.com/career-ops-hq/career-ops/commit/975abe0e393bdb60ac4bd0eb211b180070a88aee))
+
 ## [1.39.0](https://github.com/career-ops-hq/career-ops/compare/career-ops-v1.38.0...career-ops-v1.39.0) (2026-11-05)
 
 
